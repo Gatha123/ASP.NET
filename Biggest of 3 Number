@@ -1,0 +1,14 @@
+int a,b,c;
+       /Taking user input/
+       Console.WriteLine("Enter three number");
+       a = Convert.ToInt32(Console.ReadLine());
+       b = Convert.ToInt32(Console.ReadLine());
+       c = Convert.ToInt32(Console.ReadLine());
+       if (a>b&&a>c)
+           Console.WriteLine(a+" is greater");
+       if (b>a&&b>c)
+           Console.WriteLine(b+" is greater");
+       if (c>a&&c>b)
+           Console.WriteLine(c+" is greater");
+       Console.ReadKey();
+   }
