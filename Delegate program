@@ -1,0 +1,18 @@
+public delegate double mydelegate(int a,int b);
+    class Program
+    {
+        static double myfun(int x, int y)
+        {
+            return x * y;
+        }
+        static void Main(string[] args)
+        {
+            mydelegate del = new mydelegate(myfun);
+            Console.WriteLine("Please enter two numbers");
+            int P = Convert.ToInt32(Console.ReadLine());
+            int Q = Convert.ToInt32(Console.ReadLine());
+            double res = del(P, Q);
+            Console.WriteLine("Result:" + res);
+            Console.ReadKey();
+        }
+    }
