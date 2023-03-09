@@ -1,0 +1,23 @@
+public static class ExtensionMethods
+    {
+        public static string UpperCaseFirstLetter(this String value)
+        {
+            if(value.Length>0)
+            {
+                char[]array=value.ToCharArray();
+                array[0]=char.ToUpper(array[0]);
+                return new String(array);
+            }
+            return value;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String value = "dotnet";
+            value = value.UpperCaseFirstLetter();
+            Console.WriteLine(value);
+            Console.ReadKey();
+        }
+    }
