@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;V using System.Linq;
+using System.Text;
+namespace ConsoleApplication1
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[]Arrayint = {11,22,33,44};
+foreach(int m in Arrayint)
+{
+Console.WriteLine(" "+m);
+}
+Console.WriteLine();
+Console.ReadKey();
+}
+}
