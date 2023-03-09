@@ -1,0 +1,23 @@
+class Program
+    {
+        static void function()
+        {
+            for (int i = 11; i < 20; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void Main(string[] args)
+        {
+            ThreadStart childthread = new ThreadStart(function);
+            Thread obj = new Thread(childthread);
+            obj.Start();
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(i);
+                }
+                Console.ReadKey();
+            }
+        }
+    }
