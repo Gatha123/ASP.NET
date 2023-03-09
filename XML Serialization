@@ -1,0 +1,20 @@
+public class Person
+    {
+        public string name;
+        public string location;
+        public int age;
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person p = new Person();
+            p.name = "Reshma";
+            p.location = "Chengannur";
+            p.age = 26;
+            XmlSerializer x = new XmlSerializer(p.GetType());
+            x.Serialize(Console.Out,p);
+            Console.ReadKey();
+        }
+   
