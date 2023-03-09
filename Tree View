@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class treeviewpg : Form
+    {
+        public treeviewpg()
+        {
+            InitializeComponent();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode node = treeView1.SelectedNode;
+            MessageBox.Show(String.Format("you selected:{0}", node.Text));
+        }
+
+        private void treeviewpg_Load(object sender, EventArgs e)
+        {
+            TreeNode treenode = new TreeNode("Windows");
+            treeView1.Nodes.Add(treenode);
+            treenode = new TreeNode("Linux");
+            treeView1.Nodes.Add(treenode);
+            TreeNode node2 = new TreeNode("C#");
+            TreeNode node3 = new TreeNode("vb.net");
+            TreeNode[] array = new TreeNode[] { node2, node3 };
+            treenode=new TreeNode("dotnet pearls",array);
+            treeView1.Nodes.Add(treenode);
+
+        }
+    }
+}
