@@ -1,0 +1,33 @@
+abstract class Shape
+    {
+        public Shape()
+        {
+            Console.WriteLine("Constructor is called from abstract class");
+        }
+        public abstract int Area(int length, int breath);
+    }
+    class Rectangle : Shape
+    {
+        public override int Area(int length, int breath)
+        {
+            return length * breath;
+        }
+    }   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Rectangle r=new Rectangle(20,15);
+            //double a=r.area();
+            //Console.WriteLine("area: {0}",a);
+            Rectangle obj = new Rectangle();
+            Console.WriteLine("Enter the length of rectangle");
+            int length = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the brath of rectangle");
+            int breath = Convert.ToInt32(Console.ReadLine());
+            int area = obj.Area(length, breath);
+            Console.WriteLine("Area of rectangle =" + area);
+            Console.ReadLine();
+            Console.ReadKey();
+        }
+    }
