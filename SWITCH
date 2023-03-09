@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace ConsoleApplication1
+{
+class Program
+{
+int c;
+public void add(int a, int b)
+{
+c = a + b;
+Console.WriteLine("sum= " + c);
+}
+public void diff(int a, int b)
+{
+c = a - b;
+Console.WriteLine("difference= " + c);
+}
+public void mul(int a, int b)
+{
+c = a * b;
+Console.WriteLine("mult= " + c);
+}
+static void Main(string[] args)
+{
+Console.WriteLine("enter two numbers");
+int s = Convert.ToInt32(Console.ReadLine());
+int d = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("enter the sign");
+string sign= Console.ReadLine();
+Program m=new Program();
+switch(sign)
+{
+case "+":
+m.add(s,d);
+break;
+case "-":
+m.diff(s,d);
+break;
+case "*":
+m.mul(s,d);
+break;
+}
+}
+}
