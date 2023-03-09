@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class arithmeticoperations : Form
+    {
+        public arithmeticoperations()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            int c = a + b;
+            textBox3.Text = c.ToString();
+            int d = a - b;
+            textBox4.Text = d.ToString();
+            int x = a * b;
+            textBox5.Text = x.ToString();
+            int y = a / b;
+            textBox6.Text = y.ToString();
+        }
+    }
+}
